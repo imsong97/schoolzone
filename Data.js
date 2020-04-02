@@ -6,7 +6,7 @@ var data = {
 };
 
 $.ajax({
-    post: 'get',
+    // post: 'get',
     url: 'http://api.data.go.kr/openapi/child-prtc-zn-std',
     data: data,
     dataType: 'json',
