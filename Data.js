@@ -24,6 +24,6 @@ function getData(){
     }).then(function(json){
         console.log(json);
     })
-
-    
 }
+
+getData();
