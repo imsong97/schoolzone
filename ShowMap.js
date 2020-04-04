@@ -1,4 +1,3 @@
-let currentLat, currentLon;
 const inputData = document.getElementById("adress"),
     btnSearch = document.getElementById("search");
 
@@ -10,6 +9,13 @@ function getMap(currentLat, currentLon){
     };
     var map = new kakao.maps.Map(container, options);
 
+    //마커 표시
+    var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    marker.setMap(map);
+
     //지도타입
     var mapTypeControl = new kakao.maps.MapTypeControl();
 
@@ -18,20 +24,13 @@ function getMap(currentLat, currentLon){
 
     //지도 확대축소
     var zoomControl = new kakao.maps.ZoomControl();
-    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-
-    //마커 표시
-    var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-    marker.setMap(map);
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT); 
 }
 
 function init(){
     navigator.geolocation.getCurrentPosition(function(position) { //현재위치
         
-        currentLat = position.coords.latitude; // 위도
+        const currentLat = position.coords.latitude, // 위도
         currentLon = position.coords.longitude; // 경도
         
         getMap(currentLat, currentLon);
