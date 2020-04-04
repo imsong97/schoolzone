@@ -18,8 +18,6 @@ function getMap(currentLat, currentLon){
 
     //지도타입
     var mapTypeControl = new kakao.maps.MapTypeControl();
-
-    //지도타입변경
     map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
     //지도 확대축소
