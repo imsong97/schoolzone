@@ -1,3 +1,6 @@
+const inputData = document.getElementById("adress"),
+    btnSearch = document.getElementById("search");
+
 function getMap(){
     var container = document.getElementById('map');
     var options = {
