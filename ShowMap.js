@@ -1,10 +1,11 @@
+const currentLat, currentLon;
 const inputData = document.getElementById("adress"),
     btnSearch = document.getElementById("search");
 
-function getMap(){
+function getMap(currentLat, currentLon){
     var container = document.getElementById('map');
     var options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        center: new kakao.maps.LatLng(currentLat, currentLon),
         level: 3
     };
     var map = new kakao.maps.Map(container, options);
@@ -20,4 +21,13 @@ function getMap(){
     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 }
 
-getMap();
+function init(){
+    navigator.geolocation.getCurrentPosition(function(position) { //현재위치
+        currentLat = position.coords.latitude; // 위도
+        currentLon = position.coords.longitude; // 경도
+    });
+    
+    getMap(currentLat, currentLon);
+}
+
+
