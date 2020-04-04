@@ -19,10 +19,18 @@ function getMap(currentLat, currentLon){
     //지도 확대축소
     var zoomControl = new kakao.maps.ZoomControl();
     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+    //마커 표시
+    var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    marker.setMap(map);
 }
 
 function init(){
     navigator.geolocation.getCurrentPosition(function(position) { //현재위치
+        
         currentLat = position.coords.latitude; // 위도
         currentLon = position.coords.longitude; // 경도
         
