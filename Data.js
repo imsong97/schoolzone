@@ -41,7 +41,7 @@ $.get("data.json", function(data) { // 데이터에서 좌표 값을 가지고 �
 
     var markers = $(data.positions).map(function(i, position) {
         return new kakao.maps.Marker({
-            position : new kakao.maps.LatLng(position.lat, position.lng),
+            position : new kakao.maps.LatLng(latitude, longitude),
             image: markerImage
         });
     });
