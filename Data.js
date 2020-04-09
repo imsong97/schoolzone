@@ -10,6 +10,9 @@
 
 // getData();
 
+var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div
+});
+
 // // 마커 클러스터러를 생성합니다 
 const clusterer = new kakao.maps.MarkerClusterer({
     map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
