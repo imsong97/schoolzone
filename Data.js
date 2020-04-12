@@ -9,10 +9,9 @@
 // }
 
 // getData();
-import showmap from "./ShowMap";
 
-var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div
-    center : new kakao.maps.LatLng(showmap.currentLat, showmap.currentLon), // 지도의 중심좌표 
+var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div 
+    // center : new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표 
     level : 3 // 지도의 확대 레벨 
 });
 
@@ -20,7 +19,7 @@ var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표�
 const clusterer = new kakao.maps.MarkerClusterer({
     map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
     averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
-    minLevel: 3 // 클러스터 할 최소 지도 레벨 
+    minLevel: 5 // 클러스터 할 최소 지도 레벨 
 });
 
 // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
