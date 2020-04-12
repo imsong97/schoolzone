@@ -14,14 +14,14 @@ function getMap(currentLat, currentLon){
 
     // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
     $.get("/data.json", function(data) { // 데이터에서 좌표 값을 가지고 마커를 표시합니다
-        var imageSrc = 'icon1.png', imageSize = new kakao.maps.Size(40, 40), // 마커이미지 크기
-        imageOption = {offset: new kakao.maps.Point(27, 69)}; 
-        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+        // var imageSrc = 'icon1.png', imageSize = new kakao.maps.Size(40, 40), // 마커이미지 크기
+        // imageOption = {offset: new kakao.maps.Point(27, 69)}; 
+        // var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
 
         var markers = $(data.position).map(function(i, position) {
             return new kakao.maps.Marker({
-                position : new kakao.maps.LatLng(position.latitude, position.longitude),
-                image: markerImage
+                position : new kakao.maps.LatLng(position.latitude, position.longitude)
+                //image: markerImage
             });
         });
 
