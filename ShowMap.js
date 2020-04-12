@@ -30,7 +30,6 @@ function getMap(currentLat, currentLon){
 //         clusterer.addMarkers(markers);
 //     });
 
-    //var map = new kakao.maps.Map(container, options);
 
     //마커 표시
     var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
