@@ -7,7 +7,6 @@ function getMap(currentLat, currentLon){
         center: new kakao.maps.LatLng(currentLat, currentLon),
         level: 3
     };
-    var map = new kakao.maps.Map(container, options);
 
     // // 마커 클러스터러를 생성합니다 
     const clusterer = new kakao.maps.MarkerClusterer({
@@ -31,6 +30,8 @@ function getMap(currentLat, currentLon){
         // 클러스터러에 마커들을 추가합니다
         clusterer.addMarkers(markers);
     });
+
+    var map = new kakao.maps.Map(container, options);
 
     //마커 표시
     var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
