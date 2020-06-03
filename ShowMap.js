@@ -60,7 +60,7 @@ function getAddress(){
     var geocoder = new kakao.maps.services.Geocoder();
 
     // 주소로 좌표를 검색합니다
-    geocoder.addressSearch('서울 중구 세종대로 110', function(result, status) {
+    geocoder.addressSearch(address.value, function(result, status) {
 
         // 정상적으로 검색이 완료됐으면 
         if (status === kakao.maps.services.Status.OK) {
