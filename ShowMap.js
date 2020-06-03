@@ -1,9 +1,10 @@
 const search = document.querySelector(".searchButton");
 const address = document.querySelector(".searchInput");
+const currentLat, currentLon
 
 //현재위치 찾기
 navigator.geolocation.getCurrentPosition(function(position) { 
-    const currentLat = position.coords.latitude, // 위도
+    currentLat = position.coords.latitude; // 위도
     currentLon = position.coords.longitude; // 경도
     getMap(currentLat, currentLon);
 });
