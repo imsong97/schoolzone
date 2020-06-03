@@ -4,7 +4,7 @@
     display: flex;
 }
   
-.searchTerm {
+.searchInput {
     width: 100%;
     border: 3px solid #00B4CC;
     border-right: none;
