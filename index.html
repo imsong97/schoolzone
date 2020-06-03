@@ -3,7 +3,7 @@
 <head>
 	<link href="style.css" rel="stylesheet">
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a7a6e03114918d4754b99f8d6b3894b&libraries=services,clusterer,drawing"></script>
@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="search">
-		<input type="search" class="searchInput" placeholder="정확한 주소를 입력해 주세요" onKeypress="javascript:if(event.keyCode==13) {getAddress()}">
+		<input type="text" class="searchInput" placeholder="정확한 주소를 입력해 주세요" onKeypress="javascript:if(event.keyCode==13) {getAddress()}">
 		<button type="submit" class="searchButton">검색</button>
 	</div>
 	<div id="map"></div>

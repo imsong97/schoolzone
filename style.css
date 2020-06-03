@@ -9,6 +9,7 @@
     border: 3px solid #00B4CC;
     border-right: none;
     padding: 5px;
+    height: 30px;
     border-radius: 5px 0 0 5px;
     outline: none;
 }
