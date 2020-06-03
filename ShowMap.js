@@ -1,5 +1,12 @@
 const search = document.querySelector(".searchButton");
-const address = document.querySelector(".searchInput")
+const address = document.querySelector(".searchInput");
+
+//현재위치 찾기
+navigator.geolocation.getCurrentPosition(function(position) { 
+    const currentLat = position.coords.latitude, // 위도
+    currentLon = position.coords.longitude; // 경도
+    getMap(currentLat, currentLon);
+});
 
 function getMap(currentLat, currentLon){
     
@@ -80,15 +87,9 @@ function getAddress(){
         } 
     });    
 }
+function getData(){
 
-function init(){
-    navigator.geolocation.getCurrentPosition(function(position) { //현재위치
-        const currentLat = position.coords.latitude, // 위도
-        currentLon = position.coords.longitude; // 경도
-        getMap(currentLat, currentLon);
-    });
 }
 
-init();
 
 
