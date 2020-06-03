@@ -5,12 +5,14 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a7a6e03114918d4754b99f8d6b3894b&libraries=services,clusterer,drawing"></script>
 	<title>우리동네 스쿨존</title>
 </head>
 <body>
 	<div class="search">
+		<button type="submit" class="current"><i class="fas fa-crosshairs"></i></button>
 		<input type="text" class="searchInput" placeholder="정확한 주소를 입력해 주세요" onKeypress="javascript:if(event.keyCode==13) {getAddress()}">
 		<button type="submit" class="searchButton">검색</button>
 	</div>
@@ -26,7 +28,7 @@
 		</div>	
 		<div class="container mt-3 youtube-cover d-flex flex-row-reverse align-items-center">
 			<img src="youtube-copy.jpg" alt="youtube-icon" class="youtube-icon">
-			<a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link">제작 도움: 조코딩 유튜브 채널</a>
+			<a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" target="_blank" class="youtube-link">제작 도움: 조코딩 유튜브 채널</a>
 		</div>
 	</div>
 	

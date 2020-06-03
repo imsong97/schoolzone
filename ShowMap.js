@@ -1,9 +1,11 @@
-//현재위치 찾기
-navigator.geolocation.getCurrentPosition(function(position) { 
-    const currentLat = position.coords.latitude, // 위도
-    currentLon = position.coords.longitude; // 경도
-    getMap(currentLat, currentLon);
-});
+function init(){
+    //현재위치 찾기
+    navigator.geolocation.getCurrentPosition(function(position) { 
+        const currentLat = position.coords.latitude, // 위도
+        currentLon = position.coords.longitude; // 경도
+        getMap(currentLat, currentLon);
+    });
+}
 
 function getMap(currentLat, currentLon){
     var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div 
@@ -50,5 +52,4 @@ function getMap(currentLat, currentLon){
     });
 }
 
-
-
+init();
