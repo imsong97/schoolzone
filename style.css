@@ -7,7 +7,7 @@
     width: 10%;
     max-width: 50px;
     height: 46px;
-    border: 1px solid #00B4CC;
+    border: #00B4CC;
     background: #00B4CC;
     text-align: center;
     color: #fff;
@@ -25,7 +25,7 @@
     width: 40%;
     max-width: 150px;
     height: 46px;
-    border: 1px solid #00B4CC;
+    border: #00B4CC;
     background: #00B4CC;
     text-align: center;
     color: #fff;
